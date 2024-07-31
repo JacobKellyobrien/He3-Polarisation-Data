@@ -1,0 +1,4431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>800</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>He3 Polarisation App</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: rgb(170, 255, 255)qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(30, 186, 186, 255), stop:1 rgba(255, 255, 255, 255))</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="5">
+     <widget class="QPushButton" name="btn_save_page">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}
+QPushButton:Hover{
+	border-color: Red
+}</string>
+      </property>
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QPushButton" name="btn_view_page">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic
+}
+QPushButton:Hover{
+	border-color: Red
+}</string>
+      </property>
+      <property name="text">
+       <string>View</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="btn_homepage">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}
+QPushButton:Hover{
+	border-color: Red
+}</string>
+      </property>
+      <property name="text">
+       <string>Home</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="btn_options_page">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}
+QPushButton:Hover{
+	border-color: Red
+}</string>
+      </property>
+      <property name="text">
+       <string>Options</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="btn_errors_page">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}
+QPushButton:Hover{
+	border-color: Red
+}</string>
+      </property>
+      <property name="text">
+       <string>Errors</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1" colspan="2">
+     <widget class="QPushButton" name="btn_display_page">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}
+QPushButton:Hover{
+	border-color: Red
+}</string>
+      </property>
+      <property name="text">
+       <string>Display Variables</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QPushButton" name="btn_parameterspage">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic
+}
+QPushButton:Hover{
+	border-color: Red
+}</string>
+      </property>
+      <property name="text">
+       <string>Parameters</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="btn_variables_page">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic
+}
+QPushButton:Hover{
+	border-color: Red
+}</string>
+      </property>
+      <property name="text">
+       <string>Variables</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3" colspan="2">
+     <widget class="QPushButton" name="btn_edit_data_page">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}
+QPushButton:Hover{
+	border-color: Red
+}</string>
+      </property>
+      <property name="text">
+       <string>Edit Data</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="6">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_1_home">
+       <widget class="QLabel" name="lbl_enterfirstdoc">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>20</y>
+          <width>250</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Enter the first file to be opened:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textedit_first_file">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>20</y>
+          <width>281</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+QTextEdit:Hover{
+	Border-Color: Red
+}</string>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;62&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_doc_range">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>260</y>
+          <width>250</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Enter the select file range:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textedit_file_range">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>270</y>
+          <width>281</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+QTextEdit:Hover{
+	Border-Color: Red
+}</string>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;116&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="combobox_instrument_select">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>350</y>
+          <width>281</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+QComboBox:Hover{
+	Border-Color: Red
+}</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Sika</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Wombat</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Taipan</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Quokka</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="lbl_select_instrument">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>330</y>
+          <width>250</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Select the measured instrument</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_submit_page1">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>530</y>
+          <width>131</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic
+
+}</string>
+        </property>
+        <property name="text">
+         <string>Submit</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_experiment_numer">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>100</y>
+          <width>250</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Enter the select experiment Number:</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textedit_experiment_number">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>90</y>
+          <width>281</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+QTextEdit:Hover{
+	Border-Color: Red
+}</string>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;0311&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textbrowser_pg1">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>510</y>
+          <width>621</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="combobox_file_type">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>430</y>
+          <width>281</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QComboBox{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+QComboBox:Hover{
+	Border-Color: Red
+}</string>
+        </property>
+        <property name="currentText">
+         <string>.dat</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>.dat</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>HDF</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="lbl_file_type">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>410</y>
+          <width>250</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>File Type</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_file_namefull">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>180</y>
+          <width>250</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <italic>false</italic>
+          <bold>true</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>OR enter the file name</string>
+        </property>
+        <property name="scaledContents">
+         <bool>false</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textedit_first_file_fullname">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>180</y>
+          <width>281</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+QTextEdit:Hover{
+	Border-Color: Red
+}</string>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_2_options">
+       <widget class="QCheckBox" name="checkbox_sort_values">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>40</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Sort Values</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_switch_spin_flips">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>100</y>
+          <width>241</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Switch Spin Flips(.DAT only)</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_nsf_polarise_method">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>170</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Use NSF method</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_sf_polarise_method">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>170</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Use SF method</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_update_options_pg2">
+        <property name="geometry">
+         <rect>
+          <x>589</x>
+          <y>583</y>
+          <width>180</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}</string>
+        </property>
+        <property name="text">
+         <string>Update Options</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textbrowser_pg2">
+        <property name="geometry">
+         <rect>
+          <x>210</x>
+          <y>500</y>
+          <width>370</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_reset_p2">
+        <property name="geometry">
+         <rect>
+          <x>21</x>
+          <y>585</y>
+          <width>180</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}</string>
+        </property>
+        <property name="text">
+         <string>Reset Options</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_dont_sort_values">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>40</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Don't Sort Values</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textedit_depolarised_scan_number">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>390</y>
+          <width>317</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+QTextEdit:Hover{
+	Border-Color: Red
+}</string>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;177&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_depolarised_scan_input_2">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>460</y>
+          <width>761</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>(If left blank, the program will auto search for files with &quot;depol&quot; in their title)</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_depolarised_scan_manual_input">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>400</y>
+          <width>370</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Depolarised Scans Manual Input</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_calculate_phe_and_time">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>250</y>
+          <width>211</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Calculate Phe0 and Time</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_dont_calculate_phe_and_time">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>250</y>
+          <width>281</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Don't Calculate Phe0 and Time</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_3_variables">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QCheckBox" name="checkbox_temp">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <kerning>true</kerning>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Temperature</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2" colspan="2">
+         <widget class="QTextEdit" name="textedit_temp_values">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+QTextEdit:Hover{
+	Border-Color: Red
+}</string>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1.5,30,200&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QCheckBox" name="checkbox_HKL">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>HKL</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" colspan="2">
+         <widget class="QTextEdit" name="textedit_HKL_values">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+QTextEdit:Hover{
+	Border-Color: Red
+}</string>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;004,100,101,102,103,104&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QCheckBox" name="checkbox_wave_vector">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Wave Vector (q)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2" colspan="2">
+         <widget class="QTextEdit" name="textedit_wave_vector_values">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+QTextEdit:Hover{
+	Border-Color: Red
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QCheckBox" name="checkbox_depolarised_scan_to_use">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Which Depolarised Scan to Use</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2" rowspan="2" colspan="2">
+         <widget class="QTextEdit" name="textedit_depolarised_scan_option">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+QTextEdit:Hover{
+	Border-Color: Red
+}</string>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="2">
+         <widget class="QLabel" name="lbl_leave_blank_for_first_scan_depol_option">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+background-color:rgb(70, 198, 198,00)
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string>-Leave Blank for first Scan</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QCheckBox" name="checkBox_5">
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Temperature</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2" colspan="2">
+         <widget class="QTextEdit" name="textEdit_15"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QCheckBox" name="checkBox_6">
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Temperature</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="2" colspan="2">
+         <widget class="QTextEdit" name="textEdit_16"/>
+        </item>
+        <item row="7" column="0">
+         <widget class="QCheckBox" name="checkBox_7">
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Temperature</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="2" colspan="2">
+         <widget class="QTextEdit" name="textEdit_17"/>
+        </item>
+        <item row="8" column="0">
+         <widget class="QCheckBox" name="checkBox_8">
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>No Variables</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="2">
+         <widget class="QCheckBox" name="checkBox_9">
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0">
+         <widget class="QPushButton" name="btn_reset_pg3">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}</string>
+          </property>
+          <property name="text">
+           <string>Reset Values</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="1" colspan="2">
+         <widget class="QTextBrowser" name="textbrowser_pg3">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="3">
+         <widget class="QPushButton" name="btn_update_variables">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}</string>
+          </property>
+          <property name="text">
+           <string>Update Values</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_4_parameters">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="3" column="2">
+         <widget class="QLabel" name="label_8">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Wavelength</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2">
+         <widget class="QLabel" name="label_10">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">Qlabel{
+background-Color:rgb(165, 227, 227);
+}</string>
+          </property>
+          <property name="text">
+           <string>Wavelength</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QTextEdit" name="textedit_wavelength_input">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black;
+	background-color:rgb(54, 193, 193,00)
+
+
+}
+QTextEdit:Hover{
+	Border-Color: Red
+}</string>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;4.04&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="3">
+         <widget class="QTextEdit" name="textEdit_10">
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="lbl_t_si">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Silicon Transmission</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QTextEdit" name="textEdit_8">
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QTextEdit" name="textedit_trans_silicon">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black;
+	background-color:rgb(54, 193, 193,00)
+
+
+}
+QTextEdit:Hover{
+	Border-Color: Red
+}</string>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;0.9809&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLabel" name="label_9">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Wavelength</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QTextEdit" name="textedit_beam_monitor">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black;
+	background-color:rgb(54, 193, 193,00)
+
+
+}
+QTextEdit:Hover{
+	Border-Color: Red
+}</string>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;30000&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="lbl_beam_monitor">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Beam Monitor</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLabel" name="label_7">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Wavelength</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QTextEdit" name="textedit_cell_thickness_input">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black;
+	background-color:rgb(54, 193, 193,00)
+
+
+}
+QTextEdit:Hover{
+	Border-Color: Red
+}</string>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;10&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3">
+         <widget class="QTextEdit" name="textEdit_9">
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="lbl_wavelength">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Wavelength</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="2" colspan="2">
+         <widget class="QPushButton" name="btn_update_parameters_page4">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic
+}</string>
+          </property>
+          <property name="text">
+           <string>Update Parameters</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QTextEdit" name="textedit_pressure_input">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black;
+	background-color:rgb(54, 193, 193,00)
+
+
+}
+QTextEdit:Hover{
+	Border-Color: Red
+}</string>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0" colspan="2">
+         <widget class="QTextBrowser" name="textbrowser_pg4">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QTextBrowser{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black;
+	background-color: rgb(57, 222, 255)
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3" rowspan="2">
+         <widget class="QTextEdit" name="textEdit_6">
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QTextEdit" name="textEdit_7">
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" rowspan="2">
+         <widget class="QLabel" name="lbl_cell_thickness">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Cell Thickness</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="lbl_pressure">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Pressure</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_6">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+background-color: rgb(164, 227, 227,100)
+}</string>
+          </property>
+          <property name="text">
+           <string>Wavelength</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QPushButton" name="btn_calc_silicon_trans">
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic
+}</string>
+          </property>
+          <property name="text">
+           <string>Calculate Silicon Transmision</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_5_view">
+       <widget class="QTextBrowser" name="textbrowser_pg5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>520</y>
+          <width>751</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextBrowser{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+</string>
+        </property>
+       </widget>
+       <widget class="QTableView" name="tableview_pg5">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>20</y>
+          <width>321</width>
+          <height>381</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QListView" name="listview_pg5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>256</width>
+          <height>192</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_6_save">
+       <widget class="QPushButton" name="btn_save_to_csv">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>410</y>
+          <width>191</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}
+QPushButton:Hover{
+	border-color: Red
+}</string>
+        </property>
+        <property name="text">
+         <string>Save to CSV</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textbrowser_pg6">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>480</y>
+          <width>421</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+</string>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textedit_enter_desired_name">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>330</y>
+          <width>401</width>
+          <height>61</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_enter_desired_name">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>340</y>
+          <width>171</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Enter the desired name:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_organised_data">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>180</y>
+          <width>221</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Save Organised Data</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_raw_data">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>70</y>
+          <width>201</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Save raw Data</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_save_results_only">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>180</y>
+          <width>201</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Save Results Only</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_7_errors">
+       <widget class="QTextBrowser" name="textbrowser_errors_page7">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>711</width>
+          <height>551</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_clear_error_textbrowser">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>600</y>
+          <width>131</width>
+          <height>34</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}
+QPushButton:Hover{
+	border-color: Red
+}</string>
+        </property>
+        <property name="text">
+         <string>Clear Errors</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_8_display_variables">
+       <widget class="QPushButton" name="btn_update_variables_pg8">
+        <property name="geometry">
+         <rect>
+          <x>579</x>
+          <y>583</y>
+          <width>180</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}</string>
+        </property>
+        <property name="text">
+         <string>Update Values</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_reset_pg8">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>584</y>
+          <width>180</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}</string>
+        </property>
+        <property name="text">
+         <string>Reset Values</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textbrowser_pg8">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>570</y>
+          <width>370</width>
+          <height>57</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+</string>
+        </property>
+       </widget>
+       <widget class="QStackedWidget" name="stackedWidget_pg_8">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>731</width>
+          <height>511</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>3</number>
+        </property>
+        <widget class="QWidget" name="sika_page">
+         <widget class="QCheckBox" name="checkbox_magnitude_sika">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>410</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Magnitude</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_scan_sika">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>60</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Scan</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_beam_monitor_sika">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>210</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Beam Monitor</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_counts_per_beam_monitor_sika">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>260</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Counts/Beam Monitor</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_phe_calc_sika">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>60</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Phe Calc</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_counts_relative_sika">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>310</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Counts Relative Unpolarised</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_scan_title_sika">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>210</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Scan Title</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_trans_calc_sika">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>110</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Transmission Calc</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBox_26">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>310</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>CheckBox</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBox_27">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>360</y>
+            <width>301</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>CheckBox</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_scan_2">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>260</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Scan</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_errors_squared_sika">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>160</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Errors Squared</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_counts_silicon_sika">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>360</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Counts Silicon Corrected</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBox_32">
+          <property name="geometry">
+           <rect>
+            <x>400</x>
+            <y>410</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>CheckBox</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_flip_state_sika">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>160</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Flip</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_elapsed_hrs_sika">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>110</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Elapsed Hours</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lbl_sika_display">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>171</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Sika</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="wombat_page">
+         <widget class="QCheckBox" name="checkbox_wavelength_wombat">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>280</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Wavelength</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_elapsed_time_beam_monitor_1_wombat">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>330</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Elapsed Time Beam Monitor 1</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_total_counts_wombat">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>430</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Total Counts</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_scan_4">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>80</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Scan</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_elapsed_time_beam_monitor_2_wombat">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>380</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Elapsed Time Beam Monitor 2</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_phe_calc_wombat">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>80</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Phe Calc</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_trans_calc_wombat">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>130</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Transmission Calc</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_beam_monitor_2_wombat">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>280</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Beam Monitor 2</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBox_33">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>430</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>CheckBox</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBox_28">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>380</y>
+            <width>301</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>CheckBox</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_beam_monitor_1_wombat">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>230</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Beam Monitor 1</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBox_29">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>330</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>CheckBox</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_scan_title_wombat">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>230</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Scan Title</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_errors_squared_wombat">
+          <property name="geometry">
+           <rect>
+            <x>390</x>
+            <y>180</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Errors Squared</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_elapsed_hrs_per_scan_wombat">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>130</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Elapsed Hours Per Scan</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_flip_state_wombat">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>180</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Flip</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lbl_wombat_display">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>20</y>
+            <width>171</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Wombat</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="quokka_page">
+         <widget class="QCheckBox" name="checkbox_total_counts_quokka">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>290</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Total Counts</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_beam_monitor_3_quokka">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>340</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Beam Monitor 3</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_magnitude_quokka">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>440</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Magnitude</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_scan_quokka">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>90</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Scan</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_wavelength_quokka">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>390</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Wavelength</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_phe_calc_quokka">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>90</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Phe Calc</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_trans_calc_quokka">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>140</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Transmission Calc</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_beam_monitor_2_quokka">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>290</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Beam Monitor 2</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBox_34">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>440</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>CheckBox</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBox_30">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>390</y>
+            <width>301</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>CheckBox</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_beam_monitor_1_quokka">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>240</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Beam Monitor 1</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBox_31">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>340</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>CheckBox</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_scan_title_quokka">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>240</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Scan Title</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_errors_squared_quokka">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>190</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Errors Squared</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_elapsed_hrs_quokka">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>140</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Elapsed Hours</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_flip_state_quokka">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>190</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Flip</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lbl_quokka_display">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>20</y>
+            <width>171</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Quokka</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="taipan_page">
+         <widget class="QCheckBox" name="checkbox_scan_7">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>280</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Scan</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_counts_relative_taipan">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>330</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Counts Relative Unpolarised</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_magnitude_taipan">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>430</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Magnitude</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_scan_taipan">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>80</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Scan</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_counts_silicon_taipan">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>380</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Counts Silicon Corrected</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_phe_calc_taipan">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>80</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Phe Calc</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_trans_calc_taipan">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>130</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Transmission Calc</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_counts_per_beam_monitor_taipan">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>280</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Counts/Beam Monitor</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBox_35">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>430</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>CheckBox</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBox_36">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>380</y>
+            <width>301</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>CheckBox</string>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_beam_monitor_taipan">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>230</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Beam Monitor</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkBox_37">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>330</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>CheckBox</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_scan_title_taipan">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>230</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Scan Title</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_errors_squared_taipan">
+          <property name="geometry">
+           <rect>
+            <x>410</x>
+            <y>180</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Errors Squared</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_elapsed_hrs_taipan">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>130</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Elapsed Hours</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QCheckBox" name="checkbox_flip_state_taipan">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>180</y>
+            <width>311</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Flip</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="lbl_taipan_display">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>10</y>
+            <width>171</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+background-color:rgb(54, 193, 193,00)
+}</string>
+          </property>
+          <property name="text">
+           <string>Taipan</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_9_edit_data">
+       <widget class="QCheckBox" name="checkbox_non_spin_flip_data">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>201</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Non Spin Flip Data</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QTextEdit" name="textedit_non_spin_flip_data">
+        <property name="geometry">
+         <rect>
+          <x>228</x>
+          <y>30</y>
+          <width>541</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+QTextEdit:Hover{
+	Border-Color: Red
+}</string>
+        </property>
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkbox_auto_update_spin_flip_data">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>190</y>
+          <width>511</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+          <kerning>true</kerning>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QCheckBox {
+background-color:rgb(54, 193, 193,00)
+}</string>
+        </property>
+        <property name="text">
+         <string>Auto Update Spin Flip Data</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_update_variables_pg9">
+        <property name="geometry">
+         <rect>
+          <x>579</x>
+          <y>583</y>
+          <width>180</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}</string>
+        </property>
+        <property name="text">
+         <string>Update Values</string>
+        </property>
+       </widget>
+       <widget class="QTextBrowser" name="textbrowser_pg9">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>570</y>
+          <width>370</width>
+          <height>57</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTextEdit{
+	border: 2px solid black;
+	border-radius: 10px;
+	color: Black;
+	border-color: black
+
+}
+</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_reset_pg9">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>584</y>
+          <width>180</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background:rgb(57, 222, 255);
+	border: 2px solid black;
+	border-radius: 10px;
+	color: White;
+	font-style:Bold
+}
+QPushButton:Focus{
+	background: rgb(57,222,255);
+	border: 2px solid Black;
+	border-radius: 10px;
+	color: Black;
+	font-style: Italic, bold
+}</string>
+        </property>
+        <property name="text">
+         <string>Reset Values</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
